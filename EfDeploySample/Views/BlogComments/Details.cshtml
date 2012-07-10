@@ -1,0 +1,29 @@
+﻿@model EfDeploySample.Models.BlogComment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>BlogComment</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ParentPost.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParentPost.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Comment)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comment)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

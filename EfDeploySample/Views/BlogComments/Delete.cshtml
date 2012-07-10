@@ -1,0 +1,32 @@
+﻿@model EfDeploySample.Models.BlogComment
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>BlogComment</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ParentPost.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ParentPost.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Comment)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comment)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
